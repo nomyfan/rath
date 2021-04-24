@@ -50,7 +50,7 @@ fn main() {
     println!("Pin: {}", pin);
 
     let pin = Pin::new(pin);
-    pin.with_exported(|| loop {
+    pin.with_exported(|| {
         pin.set_direction(Direction::Out)?;
 
         let high = 1u8;
