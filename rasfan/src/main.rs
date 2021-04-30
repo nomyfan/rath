@@ -52,6 +52,7 @@ fn main() {
     let pin = Pin::new(pin);
     pin.with_exported(|| {
         pin.set_direction(Direction::Out)?;
+        sleep(Duration::from_micros(200));
 
         let high = 1u8;
         let low = 0u8;
