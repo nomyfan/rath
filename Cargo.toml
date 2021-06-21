@@ -1,19 +1,4 @@
-[package]
-name = "rath"
-version = "0.1.0"
-authors = ["nomyfan"]
-edition = "2018"
-
 [workspace]
 members = [
-  "rasfan"
+  "./rasfan"
 ]
-
-[[bin]]
-name = "rasfan"
-path = "./rasfan/src/main.rs"
-
-[dependencies]
-sysfs_gpio = "0.5"
-xshell = "0.1.9"
-clap = "2.33.3"
