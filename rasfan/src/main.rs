@@ -27,14 +27,7 @@ fn main() {
                 .help("Set gpio pin")
                 .default_value("14"),
         );
-    let matches = app.clone().get_matches();
-
-    if matches.is_present("h") {
-        match app.print_help() {
-            Ok(_) => std::process::exit(0),
-            Err(_) => std::process::exit(1),
-        }
-    }
+    let matches = app.get_matches();
 
     let over_temp = matches
         .value_of("temp")
